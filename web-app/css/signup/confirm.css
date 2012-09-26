@@ -1,0 +1,27 @@
+.confirm > .notice {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+#confirm-form > dl {
+	background-color: #333333;
+	margin-bottom: 20px;
+	padding: 10px 10px 5px;
+}
+
+#confirm-form > dl > dt {
+}
+
+#confirm-form > dl > dd {
+	margin-bottom: 6px;
+}
+
+#confirm-submit {
+	margin-bottom: 5px;
+}
+
+#confirm-submit,
+#confirm-cancel {
+	width: 150px;
+}

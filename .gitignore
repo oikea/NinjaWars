@@ -2,7 +2,6 @@
 devDB*
 .settings
 eclipse
-stacktrace.log
 target
 /plugins
 /web-app/plugins

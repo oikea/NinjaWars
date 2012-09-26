@@ -38,3 +38,4 @@ grails.project.dependency.resolution = {
 
 // es-commonプラグインは動的編集可能なようにインラインプラグインで設定
 grails.plugin.location."es-common-core"="../es-common-core"
+grails.plugin.location."es-common-domain-data-loader"="../es-common-domain-data-loader"

@@ -63,8 +63,9 @@ log4j = {
 		"org.eldersoftware",
 		"grails.app.job",
 		"grails.app.domain",
-		"grails.app.controller",
-		"grails.app.service"
+		"grails.app.controllers",
+		"grails.app.services",
+		"org.codehaus.groovy.grails.plugins.springsecurity"
 	)
 
 	root {

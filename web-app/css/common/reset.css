@@ -1,0 +1,163 @@
+@charset 'UTF-8';
+/*
+ElderSoftware Reset CSS File
+*/
+body {
+	font:14px "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Osaka, sans-serif;
+}
+
+html {
+	color:#000000;
+	background-color:#ffffff;
+}
+
+div {
+	margin:0;
+	vertical-align:baseline;
+}
+
+html, body, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, menu, nav, section,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+a {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+ins {
+	background-color:#ff9;
+	color:#000;
+	text-decoration:none;
+}
+
+mark {
+	background-color:#ff9;
+	color:#000;
+	font-style:italic;
+	font-weight:bold;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+	border-bottom:1px dotted #000;
+	cursor:help;
+}
+
+article, aside, dialog, 
+figure, header, footer,
+hgroup, nav, section {
+	display:block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+	font-size:inherit;
+	font:100%;
+}
+
+address, caption, cite, code,
+dfn, em, strong, ht, var, optgroup {
+	font-style:normal;
+	font-weight:normal;
+}
+
+li {
+	list-style:none;
+}
+
+abbr {
+	border:0;
+	font-variant:normal;
+}
+
+hr {
+	display:block;
+	height:1px;
+	border:0;
+	border-top:1px solid #000000;
+	margin:1em 0;
+	padding:0;
+}
+
+input, select {
+	vertical-align:middle;
+}
+
+sup {
+	vertical-align:text-top;
+}
+
+sub {
+	vertical-align:text-bottom;
+}
+
+input, button, textarea, select, optgroup, option {
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", Osaka, sans-serif;
+	font-size:normal;
+	font-style:normal;
+	font-weight:normal;
+}
+
+input, button, textarea, select {
+	font-size:99%;
+}
+
+button, input[type="button"], input[type="submit"] {
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Osaka, sans-serif;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+pre, code, kbd, samp, tt {
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", Osaka, sans-serif;
+	line-height:100%;
+}
+
+blockquote, q {
+	quotes:none;
+}
+
+input[type="password"]{ 
+	font-family: Tahoma !important;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content:'';
+	content:none;
+}
+
+caption, th {
+	text-align:left;
+	font-weight:normal;
+	white-space:nowrap;
+}

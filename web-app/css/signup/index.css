@@ -1,0 +1,26 @@
+#signup-form {
+	margin-bottom: 0;
+}
+
+#signup-form > dl {
+	padding: 5px 10px 20px;
+}
+
+#signup-form > dl > dt ,
+#signup-form > dl > dd {
+}
+
+#signup-form label {
+	font-size: 85%;
+}
+
+#signup-form input[type="text"], 
+#signup-form input[type="password"] {
+	width: 100%;
+	margin-top: 2px;
+	margin-bottom: 5px;
+}
+
+#signup-submit {
+	width: 240px;
+}

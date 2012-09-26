@@ -1,15 +1,14 @@
 grails.config.locations = [
-	// 以下のファイルはバージョン管理には含めないこと！
-	// ※TwitterAPIのAPIKeyなどを管理している。外に出したらマズい情報のため。
-	/* ↓ここからバージョン管理外 */
-	"file:./grails-app/conf/AuthKeys.groovy",
-	/* ↑ここまでバージョン管理外 */
 	"file:./grails-app/conf/SGConfig.groovy",
 	"file:./grails-app/conf/NinjaWarsConfig.groovy",
 	"file:./grails-app/conf/SecurityConfig.groovy",
 	"file:./grails-app/conf/Log4jConfig.groovy",
+	/* ↓ここからバージョン管理外 */
+	"file:./grails-app/conf/AuthKeys.groovy",
+	/* ↑ここまでバージョン管理外 */
 ]
 
+grails.gorm.failOnError = true
 grails.project.groupId = appName
 grails.mime.file.extensions = true
 grails.mime.use.accept.header = false
@@ -39,7 +38,7 @@ grails.json.legacy.builder = false
 grails.enable.native2ascii = true
 grails.spring.bean.packages = []
 grails.web.disable.multipart = true
-grails.exceptionresolver.params.exclude = ['password']
+grails.exceptionresolver.params.exclude = ["password"]
 grails.hibernate.cache.queries = false
 grails.logging.jul.usebridge = false
 

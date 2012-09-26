@@ -1,0 +1,49 @@
+#page-area h1 {
+	color: #ff0000;
+	font-size: 200%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#explanation {
+	font-size: 115%;
+	line-height: 1.5em;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#login-submit {
+	width: 240px;
+}
+
+#login-form {
+}
+
+#login-form > dl {
+	padding: 5px 10px 20px;
+}
+
+#login-form > dl > dt ,
+#login-form > dl > dd {
+}
+
+.login > .bottom,
+#topics > .bottom {
+	text-align: right;
+}
+
+.login > .bottom > a,
+#topics > .bottom > a {
+	width: 100px;
+}
+
+#login-form label {
+	font-size: 85%;
+}
+
+#login-form input[type="text"], 
+#login-form input[type="password"] {
+	width: 100%;
+	margin-top: 2px;
+	margin-bottom: 5px;
+}
