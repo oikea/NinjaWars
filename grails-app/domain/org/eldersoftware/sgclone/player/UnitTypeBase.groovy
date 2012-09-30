@@ -24,11 +24,13 @@ public class UnitTypeBase {
 	 * <ul>
 	 * <li>messageCodePrefix
 	 * <li>name
+	 * <li>description
 	 * </ul>
 	 */
 	static transients = [
 		"messageCodePrefix",
-		"name"
+		"name",
+		"description"
 	]
 
 	/**
@@ -47,5 +49,14 @@ public class UnitTypeBase {
 	 */
 	public String getName() {
 		return messageSupportService.message(code:"${this.messageCodePrefix}.name")
+	}
+
+	/**
+	 * <p>ユニットタイプの説明文を取得する。
+	 * 
+	 * @return メッセージコードのプレフィックス。
+	 */
+	public String getDescription() {
+		return messageSupportService.message(code:"${this.messageCodePrefix}.description")
 	}
 }

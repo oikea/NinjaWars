@@ -9,10 +9,10 @@ package org.eldersoftware.ninjawars.top
 
 import org.codehaus.groovy.grails.commons.ConfigurationHolder
 import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
+import org.eldersoftware.ninjawars.authority.Account
+import org.eldersoftware.ninjawars.player.Player
 
 class TopController {
-	def grailsApplication
-
 	/**
 	 * <p>インデックスアクション。
 	 */

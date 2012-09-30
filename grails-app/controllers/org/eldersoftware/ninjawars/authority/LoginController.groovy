@@ -36,6 +36,6 @@ class LoginController {
 		// 期限切れ、ユーザロック、無効は現状ないため、失敗エラーのみ
 		flash.message = g.message(code:"springSecurity.errors.login.fail")
 
-		redirect(uri:"/")
+		return []
 	}
 }

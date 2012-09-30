@@ -25,7 +25,6 @@ unitRarity {
 	datas = [
 		[code:"normal"],
 		[code:"rare"],
-		[code:"superrare"],
-		[code:"legend"],
+		[code:"superrare"]
 	]
 }

@@ -12,6 +12,9 @@
     <p id="explanation"><g:message code="top.explanation.label" /></p>
 
     <sec:ifLoggedIn>
+      <g:link class="default-button important mypage" uri="/mypage">
+        <g:message code="top.button.mypage.label" />
+      </g:link>
     </sec:ifLoggedIn>
     <sec:ifNotLoggedIn>
       <section class="login">
@@ -52,6 +55,9 @@
     </section>
 
     <sec:ifLoggedIn>
+      <g:link class="default-button important mypage" uri="/mypage">
+        <g:message code="top.button.mypage.label" />
+      </g:link>
     </sec:ifLoggedIn>
   </body>
 <html>

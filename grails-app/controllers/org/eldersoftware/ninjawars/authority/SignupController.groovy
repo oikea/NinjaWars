@@ -8,9 +8,23 @@
 package org.eldersoftware.ninjawars.authority
 
 import org.eldersoftware.ninjawars.player.Player
+import grails.plugins.springsecurity.Secured
 
 class SignupController {
 	def springSecurityService
+
+	/**
+	 * <p>アクション実行前に実行される処理。
+	 */
+	def beforeInterceptor = {
+		if (springSecurityService.isLoggedIn()) {
+			if (!request.redirected) redirect(uri:"/")
+
+			return false
+		} else {
+			return true
+		}
+	}
 
 	/**
 	 * <p>インデックスアクション。
@@ -45,7 +59,7 @@ class SignupController {
 		input.confirmPassword = params.password
 
 		if (params.submit && input.validate()) {
-			// TODO:ユーザ登録してリダイレクト。
+			// ユーザ登録してリダイレクト。
 			def account = new Account(
 				userId:input.userId,
 				password:input.password,

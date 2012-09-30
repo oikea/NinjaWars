@@ -1,0 +1,31 @@
+#type-confirm-form {
+	margin-bottom: 10px;
+}
+
+#type-confirm-form > ul {
+	margin-top: 10px;
+}
+
+#type-confirm-form > ul > li {
+	background-color: #222222;
+	padding-bottom: 10px;
+}
+
+#type-confirm-form > ul > li > img {
+	vertical-align: sub;
+}
+
+#type-confirm-form > ul > li > p.description {
+	margin-top: 10px;
+	text-align: center;
+}
+
+#type-confirm-form > ul > li > .default-button {
+	margin-top: 10px;
+	width: 160px;
+}
+
+#type-confirm-form > .link-button {
+	margin-top: 10px;
+	width: 160px;
+}

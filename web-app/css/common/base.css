@@ -28,10 +28,7 @@ body {
 	font-weight: bold;
 }
 
-input[type="submit"].default-button,
-input[type="button"].default-button,
-button.default-button,
-a.default-button {
+.default-button {
 	display: block;
 	cursor: pointer;
 	background-image: -moz-linear-gradient(top, #333333, #000000, #333333);
@@ -41,38 +38,72 @@ a.default-button {
 	border-radius: 5px;
 	color: #ffffff;
 	margin: auto;
-	padding: 10px;
+	padding: 10px !important;
 	outline: none;
 	font-weight: bold;
 }
 
 a.default-button {
 	text-decoration: none;
-	display: inline-block;
 	text-align: center;
 }
 
-input[type="submit"].default-button:hover,
-input[type="button"].default-button:hover,
-button.default-button.default-button:hover,
-a.default-button:hover,
-input[type="submit"].default-button:active,
-input[type="button"].default-button:active,
-button.default-button.default-button:active,
-a.default-button:active {
+.default-button:hover,
+.default-button:active {
 	background-image: -moz-linear-gradient(top, #555555, #222222, #555555);
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#555555), color-stop(0.50, #222222), to(#555555));
 	background-color: #555555;
 }
 
-input[type="submit"].default-button::-moz-focus-inner,
-input[type="button"].default-button::-moz-focus-inner,
-button.default-button.default-button::-moz-focus-inner,
-a.default-button::-moz-focus-inner {
+.default-button.important {
+	background-image: -moz-linear-gradient(top, #772222, #330707, #772222);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#772222), color-stop(0.50, #330707), to(#772222));
+	background-color: #330707;
+	border: 1px solid #772222;
+	font-size: 120%;
+}
+
+.default-button.important:hover,
+.default-button.important:active {
+	background-image: -moz-linear-gradient(top, #551111, #110000, #551111);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#551111), color-stop(0.50, #110000), to(#551111));
+	background-color: #551111;
+}
+
+.default-button::-moz-focus-inner {
+	border-style:none;
+}
+
+.link-button {
+	display: block;
+	cursor: pointer;
+	background-color: #000000;
+	border: 1px solid #aaaaaa;
+	border-radius: 5px;
+	color: #00ff00;
+	margin: auto;
+	padding: 10px !important;
+	outline: none;
+	font-weight: bold;
+}
+
+a.link-button {
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+}
+
+.link-button:hover,
+.link-button:active {
+	background-color: #333333;
+}
+
+.link-button::-moz-focus-inner {
 	border-style:none;
 }
 
 #siteinfo {
+	margin-top: 20px;
 }
 
 #copyright {
@@ -157,4 +188,54 @@ select {
 
 .errors > ul > li {
 	margin-bottom: 5px;
+}
+
+.face-message {
+	border-bottom: 1px dashed #CCCCCC;
+	border-top: 1px dashed #CCCCCC;
+	width: 100%;
+}
+
+.face-message > tbody > tr > td {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	vertical-align: middle;
+}
+
+.face-message > tbody > tr > td.image {
+	width: 110px;
+}
+
+.face-message > tbody > tr > td.image > img {
+	vertical-align: sub;
+}
+
+.face-message > tbody > tr > td.message {
+	text-align: left;
+}
+
+.notice {
+	color: #aaaaaa;
+}
+
+.nav-box.header {
+	margin-top: -20px;
+}
+
+.nav-box.footer {
+}
+
+.nav-box {
+}
+
+.nav-box > li {
+	display: inline-block;
+}
+
+.nav-box > li > a {
+	outline: none;
+}
+
+.nav-box > li > a > img {
+	vertical-align: bottom;
 }

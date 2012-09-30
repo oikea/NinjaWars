@@ -64,8 +64,7 @@ log4j = {
 		"grails.app.job",
 		"grails.app.domain",
 		"grails.app.controllers",
-		"grails.app.services",
-		"org.codehaus.groovy.grails.plugins.springsecurity"
+		"grails.app.services"
 	)
 
 	root {

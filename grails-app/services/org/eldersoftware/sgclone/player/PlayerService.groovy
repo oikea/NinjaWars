@@ -7,6 +7,8 @@
  */
 package org.eldersoftware.sgclone.player
 
+import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
+
 class PlayerService {
 	static transactional = false
 
@@ -18,11 +20,12 @@ class PlayerService {
 	 * <p>未ログイン状態の場合、メソッドは{@code null}を返す。
 	 */
 	public def getLoginPlayer() {
-		def principal = springSecurityService.principal
+		if (!springSecurityService.isLoggedIn()) return null
 
-		// principalが存在しないか未ログインならnull
-		if (principal == null || principal instanceof String) return
+		String userClassName = SpringSecurityUtils.securityConfig.userLookup.userDomainClassName
+		def dc = grailsApplication.getDomainClass(userClassName)
+		if (!dc) throw new RuntimeException("The specified user domain class '$userClassName' is not a domain class")
 
-		return principal.domainClass.${grailsApplication.config.sgclone.player.propertyName}
+		return dc.clazz.get(springSecurityService.principal.id)."${grailsApplication.config.sgclone.player.propertyName}"
 	}
 }

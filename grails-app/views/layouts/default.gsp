@@ -14,9 +14,11 @@
   <body>
     <div id="page-area">
       <sec:ifLoggedIn>
+        <sg:headerMenu />
       </sec:ifLoggedIn>
       <g:layoutBody />
       <sec:ifLoggedIn>
+        <sg:footerMenu />
       </sec:ifLoggedIn>
 
       <div id="siteinfo">

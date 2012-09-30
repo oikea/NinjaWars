@@ -22,6 +22,9 @@ public class PlayerBase {
 	/** 所持金 */
 	int money
 
+	/** 友情ポイント */
+	int friendPoint
+
 	/** 最大体力 */
 	int maxStamina
 
@@ -30,6 +33,9 @@ public class PlayerBase {
 
 	/** 最大守コスト */
 	int maxDefenceCost
+
+	/** ユニット上限数 */
+	int maxUnits
 
 	/** 体力が完全に回復する時刻 */
 	Date dateStaminaFull
@@ -54,6 +60,9 @@ public class PlayerBase {
 
 	/** 罠の所持数 */
 	int trapCount
+
+	/** チュートリアルが完了しているか？ */
+	boolean tutorialCompleted
 
 	/** エンティティ制約。 */
 	static constraints = {
@@ -82,6 +91,8 @@ public class PlayerBase {
 	 * <li>attackCost
 	 * <li>defenceCost
 	 * <li>friends
+	 * <li>tutorialProgress
+	 * <li>maxFriends
 	 * </ul>
 	 */
 	static transients = [
@@ -89,7 +100,9 @@ public class PlayerBase {
 		"stamina",
 		"attackCost",
 		"defenceCost",
-		"friends"
+		"friends",
+		"tutorialProgress",
+		"maxFriends",
 	]
 
 	/**
@@ -181,9 +194,11 @@ public class PlayerBase {
 		this.level = 1
 		this.experience = 0
 		this.money = config.money ?: 0
+		this.friendPoint = 0
 		this.maxStamina = config.stamina ?: 20
 		this.maxAttackCost = config.attackCost ?: 10
 		this.maxDefenceCost = config.defenceCost ?: 10
+		this.maxUnits = config.maxUnits ?: 30
 		this.dateStaminaFull = now
 		this.dateAttackFull = now
 		this.dateDefenceFull = now
@@ -212,6 +227,17 @@ public class PlayerBase {
 	}
 
 	/**
+	 * <p>プレーヤーのフレンド最大人数を取得する。
+	 * 
+	 * @return フレンドの最大人数。
+	 */
+	public int getMaxFriends() {
+		def config = grailsApplication.config.sgclone.player.initialParameter
+
+		return (config.maxFriends ?: 5) + (level / 5)
+	}
+
+	/**
 	 * <p>パラメータの値を算出する内部メソッド。
 	 * <p>値は最大値と完全回復する時間、回復のインターバルから算出される。
 	 * <p>また、計算結果が最小値、最大値の範囲を超えた場合は範囲の補正が行われる。
@@ -225,7 +251,7 @@ public class PlayerBase {
 	protected int calcParameterValue(Date dateFull, int maxValue, int recoveryInterval) {
 		long diff = dateFull.time - (new Date()).time
 
-		return Math.min(Math.max(0, Math.floor(maxValue - (diff / 36000 / recoveryInterval), maxValue)))
+		return Math.min(Math.max(0, Math.floor(maxValue - (diff / 36000 / recoveryInterval))), maxValue)
 	}
 
 	/**
