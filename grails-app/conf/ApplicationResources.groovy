@@ -1,7 +1,6 @@
 modules = {
 	top {
 		resource(url:"/images/top/title01.jpg", attrs:[width:"100%"], disposition:"inline")
-		resource(url:"/images/top/title02.jpg", attrs:[width:"100%"], disposition:"inline")
 	}
 
 	common {
